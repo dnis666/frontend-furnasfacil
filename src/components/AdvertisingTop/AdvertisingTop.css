@@ -1,0 +1,13 @@
+.advertising-container {
+    width: 100%;
+    display: flex;
+    margin-top: 39px;
+}
+
+.advertising-top {
+    max-width: 1207px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
