@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useDevice } from '../DeviceContext/DeviceContext';
 import "./SearchHome.css";
 
 const SearchHome = () => {
+  const { isMobile } = useDevice();
   const [formData, setFormData] = useState({
     region: "",
     entryDate: "",
@@ -66,9 +68,13 @@ const SearchHome = () => {
     // Aqui você pode enviar os dados para um servidor ou fazer qualquer outra coisa com eles.
   };
 
-  return (
+  return isMobile ? (
     <>
-      <div className="search-home-container">
+
+    </>
+  ) : (
+  <>
+        <div className="search-home-container">
         <div className="search-home-contents">
           <form onSubmit={handleSubmit}>
             <h2>Encontre a sua casa do final de semana</h2>
@@ -139,13 +145,12 @@ const SearchHome = () => {
                 />
               </div>
             </div>
-
             <button type="submit">Buscar</button>
           </form>
         </div>
       </div>
-    </>
-  );
+  </>
+  )
 };
 
 export default SearchHome;

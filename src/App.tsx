@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
+import { DeviceProvider } from '../src/components/DeviceContext/DeviceContext';
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
@@ -15,12 +16,14 @@ function App() {
 
   return (
     <>
-     <Header />
-      <SearchHome />
-      <AdvertisingTop />
-      <TopRent />
-      <AdvertisingMiddle />
-     <Footer />
+      <DeviceProvider>
+        <Header />
+        <SearchHome />
+        <AdvertisingTop />
+        <TopRent />
+        <AdvertisingMiddle />
+        <Footer />
+      </DeviceProvider>
     </>
   )
 }

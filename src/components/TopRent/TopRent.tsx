@@ -1,7 +1,10 @@
 import TopImg from "../../assets/top-house.png";
+import { useDevice } from '../DeviceContext/DeviceContext';
 import "./TopRent.css";
 
 const TopRent = () => {
+  const { isMobile } = useDevice();
+
   const topRentImg = TopImg;
 
   const divStyle = {
@@ -12,7 +15,7 @@ const TopRent = () => {
     height: "258px",
   };
 
-  return (
+  return isMobile ? (<></>) : (
     <>
       <div className="toprent-container">
         <div className="toprent-content">
