@@ -102,3 +102,45 @@
   width: 100%;
   flex-direction: column;
 }
+
+.header-mobile-container {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.6);
+  padding: 10px 15px;
+  max-width: 100%;
+}
+
+.header-mobile-contents {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  max-width: 100%;
+}
+
+.login-mobile-open {
+  position: relative;
+}
+
+.modal-login {
+  position: fixed;
+  background-color: rgba(0,0,0,0.4);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.modal-login button {
+
+}
+
+.modal-content {
+  height: 320px;
+  width: 80%;
+  background-color: #fff;
+  margin: 30% auto;
+  padding: 20px;
+}

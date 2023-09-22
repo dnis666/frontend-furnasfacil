@@ -39,8 +39,19 @@ const Header = () => {
         <div className="header-mobile-container">
           <div className="header-mobile-contents">
             <div className="mobile-logo">
-              <img src={LogoFull} width={150} alt="logo" />
+              <img src={LogoFull} width={200} alt="logo" />
             </div>
+            <div className={login ? 'login-mobile-open' : 'login-mobile'} onClick={loginBlock}>
+              <img src={Login} alt="login" height={40} />
+            </div>
+            {login && (
+              <div className="modal-login">
+                <div className="modal-content">
+                  <button onClick={loginBlock}>x</button>
+                </div>
+              </div>
+            )
+            }
           </div>
         </div>
       </>
