@@ -1,0 +1,28 @@
+.footer {
+    border-top: 1px solid #DCDCDC;
+    background-color: #fff;
+    padding: 25px 0;
+    width: 100%;
+    display: flex;
+    margin-top: 39px;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.logo-dev {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.logo-dev span{
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.logo-furnas {
+    margin-right: 15px;
+}
