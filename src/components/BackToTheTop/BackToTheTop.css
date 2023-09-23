@@ -1,0 +1,18 @@
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.back-to-top div {
+    padding: 10px;
+}
+
+.back-to-top:hover {
+  background-color: #444;
+  
+}
