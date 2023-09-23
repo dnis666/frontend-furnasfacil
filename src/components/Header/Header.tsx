@@ -1,10 +1,11 @@
 import "./Header.css";
-
+import { useDevice } from '../DeviceContext/DeviceContext';
 import LogoFull from "../../assets/logo-full.png";
 import Login from "../../assets/login.svg";
 import { useState } from "react";
 
 const Header = () => {
+  const { isMobile } = useDevice();
   const [login, setLogin] = useState(false);
 
   const loginBlock = () => {
@@ -33,24 +34,46 @@ const Header = () => {
   };
 
   return (
-    <>
-      <div className="header-container">
-        <div className="header-contents">
-          <div className="logo">
-            <img src={LogoFull} alt="logo" />
+    isMobile ? (
+      <>
+        <div className="header-mobile-container">
+          <div className="header-mobile-contents">
+            <div className="mobile-logo">
+              <img src={LogoFull} width={200} alt="logo" />
+            </div>
+            <div className={login ? 'login-mobile-open' : 'login-mobile'} onClick={loginBlock}>
+              <img src={Login} alt="login" height={40} />
+            </div>
+            {login && (
+              <div className="modal-login">
+                <div className="modal-content">
+                  <button onClick={loginBlock}>x</button>
+                </div>
+              </div>
+            )
+            }
           </div>
-          <div className="links">
-            <a href="/">Alugar</a>
-            <a href="/">Comprar</a>
-          </div>
-          <div className={login ? 'login-open' : 'login' } onClick={loginBlock}>
-            <img src={Login} alt="login" height={40} />
-          </div>
-          {login && (
-            <>
-              <div className="login-block">
-                <form onSubmit={handleSubmit}>
-                  {/* <div>
+        </div>
+      </>
+    ) : (
+      <>
+        <div className="header-container">
+          <div className="header-contents">
+            <div className="logo">
+              <img src={LogoFull} alt="logo" />
+            </div>
+            <div className="links">
+              <a href="/">Alugar</a>
+              <a href="/">Comprar</a>
+            </div>
+            <div className={login ? 'login-open' : 'login'} onClick={loginBlock}>
+              <img src={Login} alt="login" height={40} />
+            </div>
+            {login && (
+              <>
+                <div className="login-block">
+                  <form onSubmit={handleSubmit}>
+                    {/* <div>
                     <label htmlFor="name">Nome:</label>
                     <input
                       type="text"
@@ -61,36 +84,37 @@ const Header = () => {
                     />
                   </div> */}
 
-                  <div className="block-form email">
-                    <label htmlFor="email">Email</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
-                  </div>
+                    <div className="block-form email">
+                      <label htmlFor="email">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
+                    </div>
 
-                  <div className="block-form password">
-                    <label htmlFor="password">Senha</label>
-                    <input
-                      type="password"
-                      id="password"
-                      name="password"
-                      value={formData.email}
-                      onChange={handleChange}
-                    />
-                  </div>
+                    <div className="block-form password">
+                      <label htmlFor="password">Senha</label>
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
+                    </div>
 
-                  <button type="submit">Entrar</button>
-                </form>
-              </div>
-            </>
-          )}
+                    <button type="submit">Entrar</button>
+                  </form>
+                </div>
+              </>
+            )}
+          </div>
         </div>
-      </div>
-    </>
+      </>
+    )
   );
 };
 

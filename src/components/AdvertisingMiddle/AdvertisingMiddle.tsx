@@ -1,9 +1,12 @@
 import AdvertisingMiddleImg from "../../assets/advertising-four.png"
-
+import { useDevice } from '../DeviceContext/DeviceContext';
 import "./AdvertisingMiddle.css"
 
 const AdvertisingMiddle = () => {
-    return (
+    const { isMobile } = useDevice();
+    return isMobile ? (
+    <></>
+    ) : (
     <>
         <div className="advertising-middle-container">
             <div className="advertising-middle-content">
