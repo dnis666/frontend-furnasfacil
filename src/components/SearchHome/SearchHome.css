@@ -1,75 +1,97 @@
 .search-home-container {
-    background-image: url('../../assets/bg-search.png');
-    width: 1920px;
-    height: 520px;
-    max-width: 100%;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-    background-position: center;
-    position: relative;
+  background-image: url("../../assets/bg-search.png");
+  width: 1920px;
+  height: 520px;
+  max-width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  background-position: center;
+  position: relative;
 }
 
 .dois-campos {
-    display: flex;
-    gap: 9px;
-    max-width: 338px;
+  display: flex;
+  gap: 9px;
+  max-width: 338px;
 }
 
-.dois-campos div{
-    display: flex;
+.dois-campos div {
+  display: flex;
 }
 
-.dois-campos div input{
-    display: flex;
-    height: 40px;
-    padding: 0 10px;
-    max-width: 140px;
+.dois-campos div input {
+  display: flex;
+  height: 40px;
+  padding: 0 10px;
+  max-width: 140px;
 }
 
 .search-home-contents form {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.70);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    left: 18%;
-    top: 7.5%;
-    height: 444px;
-    width: 100%;
-    max-width: 338px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 58px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  left: 18%;
+  top: 7.5%;
+  height: 444px;
+  width: 100%;
+  max-width: 338px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 58px;
 }
 
-.search-home-contents form h2{
-    color: #000;
-    font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.search-home-contents form h2 {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
-.campo-regiao, .campo-data {
-    display: flex;
-    width: 100%;
-    margin-bottom: 20px;
+.form-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.campo-regiao {
+  display: flex;
+  width: 100%;
 }
 
 .campo-regiao select {
-    display: flex;
-    width: 100%;
-    height: 40px;
-    padding: 0 10px;
-    font-family: 'Montserrat', sans-serif;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.campo-data {
+  width: 100%;
+  display: flex;
+  gap: 9px;
+  max-width: 338px;
+}
+
+.campo-data > div {
+  flex: 1;
+}
+
+.campo-data input {
+  height: 40px;
+  padding: 0 10px;
+  max-width: 140px;
+  width: 100%;
 }
 
 .search-home-contents button {
-    margin-top: 20px;
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 13px 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 13px 0;
 }

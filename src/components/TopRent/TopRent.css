@@ -1,29 +1,38 @@
 .toprent-container {
-    display: flex;
-    width: 100%;
-    margin-top: 39px;
+  display: flex;
+  width: 100%;
+  margin-top: 39px;
 }
 
 .toprent-content {
-    max-width: 1207px;
-    margin: 0 auto;
+  max-width: 1207px;
+  margin: 0 auto;
 }
 
 .ring-container {
   position: relative;
   background-color: #fff;
-  width: 200px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  left: 8%;
+  width: 180px;
+  height: 55px;
+  left: 2%;
   top: 5%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
-.ring-container strong{
+.ring-container strong {
   color: #62bd19;
-  margin-left: 35px;
+}
+
+.circle-container {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
 }
 
 .circle {
@@ -31,9 +40,6 @@
   height: 15px;
   background-color: #62bd19;
   border-radius: 50%;
-  position: absolute;
-  top: 23px;
-  left: 23px;
   display: flex;
   align-items: center;
 }
@@ -44,12 +50,11 @@
   height: 25px;
   width: 25px;
   position: absolute;
-  left: 15px;
-  top: 15px;
   -webkit-animation: pulsate 1s ease-out;
   -webkit-animation-iteration-count: infinite;
   opacity: 0;
 }
+
 @-webkit-keyframes pulsate {
   0% {
     -webkit-transform: scale(0.1, 0.1);
@@ -64,15 +69,52 @@
   }
 }
 
-.toprent-house, .toprent-info {
-    display: flex;
+.toprent-house {
+  position: relative;
+}
+
+.toprent-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 53.99%
+  );
+  color: #fff;
+}
+
+.toprent-info .infos {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
+  max-width: 100%;
+  top: 60%;
+  transform: translateY(-60%);
+}
+
+.toprent-info .infos .right-side {
+  display: flex;
+  gap: 40px;
+}
+
+.toprent-image {
+  max-height: 260px;
+  overflow: hidden;
+}
+
+.toprent-image img {
+  width: 100%;
+  height: auto;
 }
 
 .toprent-toaster {
-    background-color: #fff;
-    display: flex;
-    width: 250px;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
+  background-color: #fff;
+  display: flex;
+  width: 250px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
 }
