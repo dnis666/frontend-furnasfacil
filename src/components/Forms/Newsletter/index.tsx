@@ -4,7 +4,7 @@ import './style.css';
 const Newsletter = () => {
   const googleScript =
     'https://script.google.com/macros/s/AKfycbw34x6KUTAcgTm5wy_nMu-W7rAV0BVXrKCXgkQsnhgdvBeUOasHimmFnzluofK2GWWi_Q/exec';
-  const [name, setName] = useState<string>('');
+  const [nome, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -12,15 +12,17 @@ const Newsletter = () => {
 
     const formData = new FormData();
 
-    formData.append('nome', name);
+    formData.append('nome', nome);
     formData.append('email', email);
+
+    console.log('nome', nome);
+    console.log('email', email);
+
+    console.log(formData);
 
     fetch(googleScript, {
       method: 'POST',
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'content-type': 'multipart/form-data',
-      },
+      mode: 'no-cors',
       body: formData,
     })
       .then((response) => {
@@ -43,7 +45,7 @@ const Newsletter = () => {
           type="text"
           name="nome"
           placeholder="Nome"
-          value={name}
+          value={nome}
           onChange={(e) => {
             setName(e.target.value);
           }}
