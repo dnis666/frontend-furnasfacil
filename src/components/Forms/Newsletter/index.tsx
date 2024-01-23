@@ -4,18 +4,20 @@ import './style.css';
 const Newsletter = () => {
   const googleScript =
     'https://script.google.com/macros/s/AKfycbw34x6KUTAcgTm5wy_nMu-W7rAV0BVXrKCXgkQsnhgdvBeUOasHimmFnzluofK2GWWi_Q/exec';
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    const formData = new FormData();
+
+    formData.append('nome', name);
+    formData.append('email', email);
+
     fetch(googleScript, {
       method: 'POST',
-      body: {
-        nome: name,
-        email,
-      },
+      body: formData,
     })
       .then((response) => {
         alert(`Enviado!`);
