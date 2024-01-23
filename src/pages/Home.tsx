@@ -8,6 +8,7 @@ import BackToTheTop from '../components/BackToTheTop/BackToTheTop';
 import Showroom from '../components/ShowRoom';
 import Testimonials from '../components/Testimonials';
 import { DeviceProvider } from '../components/DeviceContext/DeviceContext';
+import Newsletter from '../components/Forms/Newsletter';
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
         <AdvertisingMiddle />
         <Showroom />
         <Testimonials />
+        <Newsletter />
         <Footer />
         <BackToTheTop />
       </DeviceProvider>

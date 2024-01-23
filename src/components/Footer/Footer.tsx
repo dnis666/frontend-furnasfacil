@@ -1,6 +1,7 @@
-import LogoStartWeb from "../../assets/logo-start-web.png";
-import LogoFull from "../../assets/logo-full.png";
-import "./Footer.css";
+import LogoStartWeb from '../../assets/logo-start-web.png';
+import LogoFull from '../../assets/logo-full.png';
+import './Footer.css';
+
 const Footer = () => {
   return (
     <>
