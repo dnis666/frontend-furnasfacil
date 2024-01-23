@@ -17,6 +17,10 @@ const Newsletter = () => {
 
     fetch(googleScript, {
       method: 'POST',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'content-type': 'multipart/form-data',
+      },
       body: formData,
     })
       .then((response) => {
