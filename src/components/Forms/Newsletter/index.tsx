@@ -2,9 +2,7 @@ import { type FormEvent, useState } from 'react';
 import './style.css';
 
 const Newsletter = () => {
-  const googleScript =
-    'https://script.google.com/macros/s/AKfycbw34x6KUTAcgTm5wy_nMu-W7rAV0BVXrKCXgkQsnhgdvBeUOasHimmFnzluofK2GWWi_Q/exec';
-  const [nome, setName] = useState<string>('');
+  const googleScript = 'https://api.sheetmonkey.io/form/f1XxtX4jk1MWb4p68GQCcS';
   const [email, setEmail] = useState<string>('');
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -12,13 +10,7 @@ const Newsletter = () => {
 
     const formData = new FormData();
 
-    formData.append('nome', nome);
     formData.append('email', email);
-
-    console.log('nome', nome);
-    console.log('email', email);
-
-    console.log(formData);
 
     fetch(googleScript, {
       method: 'POST',
@@ -29,7 +21,6 @@ const Newsletter = () => {
         alert(`Enviado!`);
         console.info(response);
         setEmail('');
-        setName('');
       })
       .catch((error) => {
         console.error('Erro no envio dos dados', error);
@@ -41,15 +32,9 @@ const Newsletter = () => {
     <>
       <form onSubmit={handleSubmit} name="newsletter-form">
         <h2>Newsletter</h2>
-        <input
-          type="text"
-          name="nome"
-          placeholder="Nome"
-          value={nome}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
+        <p>
+          Cadastre o seu emial e fique por dentro de todas as nossas novidades!
+        </p>
         <input
           type="email"
           name="email"
