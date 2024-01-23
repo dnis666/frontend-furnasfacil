@@ -1,0 +1,55 @@
+.testimonials-container {
+  display: flex;
+  width: 100%;
+  margin-top: 39px;
+}
+
+.testimonials-content {
+  max-width: 1207px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+}
+
+.testimony {
+  display: flex;
+}
+
+.testimony .avatar {
+  background: #d9d9d9;
+  width: 150px;
+  height: 197px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.testimony .avatar img {
+  width: auto;
+  height: 100%;
+}
+
+.testimony .content {
+  flex: 1;
+  background: #f0eeee;
+  padding: 20px;
+}
+
+.testimony .content .name {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.testimony .content .text {
+  font-size: 14px;
+  max-height: 127px;
+  width: 393px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: wrap;
+}
+
+.testimony .content .text:hover {
+  overflow: auto;
+}

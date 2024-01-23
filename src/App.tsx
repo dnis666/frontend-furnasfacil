@@ -12,6 +12,7 @@ import TopRent from './components/TopRent/TopRent';
 import AdvertisingMiddle from './components/AdvertisingMiddle/AdvertisingMiddle';
 import BackToTheTop from './components/BackToTheTop/BackToTheTop';
 import Showroom from './components/ShowRoom';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <TopRent />
         <AdvertisingMiddle />
         <Showroom />
+        <Testimonials />
         <Footer />
         <BackToTheTop />
       </DeviceProvider>
